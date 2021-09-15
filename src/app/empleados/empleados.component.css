@@ -1,0 +1,13 @@
+
+.box{
+    background-color: slateblue;
+}
+.title {
+    text-align: center;
+    color: teal;
+    background-color: yellowgreen;
+}
+
+.empleado-1 {
+    font-size: 2rem;
+}
