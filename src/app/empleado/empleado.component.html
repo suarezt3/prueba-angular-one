@@ -1,7 +1,18 @@
-<p>Nombre del empleado: {{nombre}} </p>
-<p>Apellido del empleado: {{apellido}}</p>
-<p>Edad del empleado: {{edad < 18 ? "Es menor de edad":"Es mayor de edad"}}</p>
+<p>Nombre del usuario: {{nombre}} </p>
+<p>Apellido del usuario: {{apellido}}</p>
+<p>Edad del usuario: {{edad < 25 ? "Es mayor de edad":"Es menor de edad"}}</p>
 <!-- <p>Empresa: {{getEmpresa()}}</p> -->
-<p>Empresa: {{empresa.value}}</p>
-<p>Introduce el nombre de la empresa: <input type="text" #empresa (keyup)="0"></p>
+<p>Animal favorito: {{empresa.value}}</p>
+<p>Introduce el nombre del animal : <input type="text" #empresa (keyup)="0"></p>
+<hr>
+<hr>
+<!-- <input type="text" {(ngModel)}="title" > 
+{{title}}  -->
 <!-- <input type="button" value="Dale clic" (click)="llamaEmpresa(empresa.value)" /> -->
+
+<ul>
+    <li *ngFor="let task of taskList; index as i">
+        {{task}} {{i}}
+        <button (click)="deleteItem(i)">Delete</button>
+    </li>
+</ul>

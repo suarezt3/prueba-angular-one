@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-empleado',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit {
 
+  title: string = ""
+
   nombre: string = "Eyder";
   apellido: string = "Suarez"
   edad: number = 10;
+
+  taskList: string[] = ['Estudiar angular', 'Ver SQL', 'Estudiar Angular']
+
+  deleteItem(index: number) {
+    this.taskList.splice(index, 1)
+  }
+
+  // title: string = ""
   //private empresa: string = "Suarez Corporation";
 
   // llamaEmpresa(value:String){
@@ -20,6 +31,7 @@ export class EmpleadoComponent implements OnInit {
   //   return this.empresa;
   // }
 
+  
   constructor() { }
 
   ngOnInit(): void {
